@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3f4ult Code Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>D3f4ult Code Editor</h1>
+
+    <div class="controls">
+        <select id="languageSelect">
+            <option value="lua">Lua</option>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="ruby">Ruby</option>
+            <option value="php">PHP</option>
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="bash">Bash</option>
+            <option value="swift">Swift</option>
+            <option value="typescript">TypeScript</option>
+            <option value="go">Go</option>
+            <option value="kotlin">Kotlin</option>
+        </select>
+
+        <button class="export-btn" onclick="downloadCode()">
+            <i class="fas fa-download"></i> Export
+        </button>
+        <button class="run-btn" onclick="runCode()">
+            <i class="fas fa-play"></i> Run
+        </button>
+    </div>
+
+    <div class="editor-container">
+        <div class="editor-header">
+            <div class="language-info" id="languageInfo">Language: JavaScript</div>
+            <div class="line-count" id="lineCount">Line: 1, Column: 1</div>
+        </div>
+        <textarea id="editor" placeholder="Write your code here..."></textarea>
+    </div>
+
+    <div id="output" class="fade-in"></div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
